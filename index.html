@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper #fdd835 yellow darken-1">
+          <a href="#" class="brand-logo">Job-Portal</a>
+          <ul id="nav-mobile" class="right ">
+
+            <li><a href="#" class="modal-trigger" data-target="modal1">login</a></li>
+
+
+            <li><a href="badges.html" class="modal-trigger" data-target="modal2">signup</a></li>
+            <li><a href="collapsible.html">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    <!-- signup Modal -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Signup</h4>
+          <form>
+            <input type="email" id="signup-email" placeholder="email@"/>
+            <input type="password" id="signup-pass" placeholder="password"/>
+            <a class="waves-effect waves-light btn" id="Sinup-btn">button</a>
+        </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+      <!-- login modal  -->
+       
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4>
+          <form>
+            <input type="email" id="Login-email" placeholder="email@"/>
+            <input type="password" id="Login-pass" placeholder="password"/>
+            <a class="waves-effect waves-light btn" id="login-btn">button</a>
+        </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+      });
+    </script>
+    <script src="app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
